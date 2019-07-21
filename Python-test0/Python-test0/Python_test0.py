@@ -32,12 +32,15 @@ class Test:
     def __init__(self):
         self.color='red'
         self.height=100
-    def __getattribute__(self, name):
+    #def __getattribute__(self, name):
          
-            self.color='blue'
-            return super().__getattribute__(name)
+    #        self.color='blue'
+    #        return super().__getattribute__(name)
+    def __setattr__(self, name, value):
+        print(name)
+        return super().__setattr__(name, value)
        
 a=Test()
-print(a.color)
-print(a.color)
+#print(a.color)
+a.color='black'
         
