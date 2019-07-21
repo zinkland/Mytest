@@ -38,7 +38,6 @@ class Test:
             return super().__getattribute__(name)
        
 a=Test()
-print(a.__dict__)
 print(a.color)
-print(a.__dict__)
+print(a.color)
         
